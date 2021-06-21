@@ -6,7 +6,7 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from video import Video
 
-# making a file for client to store its key -- not for production delete this while deploying
+# making a file for client to store its key -- not for production delete this while deploying if you are using it please add you secret file in the credentials section
 
 def auth():
     credentials = None
@@ -23,7 +23,7 @@ def auth():
         else:
             print('Fetching New Tokens...')
             flow = InstalledAppFlow.from_client_secrets_file(
-                'secret_file.json',
+                'you secret file',
                 scopes=[
                     'https://www.googleapis.com/auth/youtube'
                 ]
