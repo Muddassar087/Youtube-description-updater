@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./render.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    
+    <title>YDU</title>
+</head>
+<body>
+    <style>
+        .auth{
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+        }
+    </style>
+    <div class='auth' id='auth'>
+        <h1 class='brand' style="width: 450px;">Youtube description updater</h1><br>
+        <button onclick="authurizeUser()" style="
+        margin-left: 27%;
+        margin-top: 5px;
+        padding: 13px  42px;
+        background-color: rgb(115, 0, 255);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: larger;
+       
+        ">Authorize</button>
+    </div>
+    <div class="loading" style="display: none;position: fixed;top:44%;left:44%;transform: translate(-50%, -50%);"></div>
+    <script src="https://apis.google.com/js/api.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./render.js"></script>
+  <script defer src="./build.js"></script>
+  <script defer src="./api.js"></script>
+  <script type="text/javascript" src="/eel.js"></script>
+
+  <title>Youtube description Updater</title>
+</head>
+
+<body>
+  <div style="width: 1280px;">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu">
+        <h1 class="brand">Youtube description Updater</h1>
+        <h2 class="link" onclick="toggle('logoutPanel')">Logout</h2>
+      </div>
+    </nav>
+  </div>
+
+  <!-- notificaion panel for link -->
+  <div class="notification" id='ntPanel' style="display: none;">
+    <h1>Link copied</h1>
+    <p id='nttext'></p>
+  </div>
+  <!-- loading -->
+    
+  <div class="container">
+    <div class="logoutPanel" id='logoutPanel' style='display: none;'>
+    <h1 style="font-size: 22px;">Are you sure you want to logout and exit</h1>
+      <button class="btn_1" onclick="toggle('logoutPanel')" style="font-size: medium;">Cancel</button>
+      <button class="btn_2" onclick="logout()" style="font-size: medium;">Yes</button>
+    </div>
+    <!-- left panel for videos title -->
+    <div>
+      <aside class="left">
+        <div>
+          <div class="actions">
+            <Span style="font-weight: 600;">Actions</Span>
+            <div class="dropdown">
+              <span id="dropdown-text" onclick="toggle('dropdown-content')">Actions</span>
+              <div class="dropdown-content" id='dropdown-content' style='display: none;'>
+                <input type="checkbox" name="selectAll" id="selectAll" onchange="selectAllVideos()">
+                <label for="selectAll" class="dp-cont">Select all</label><br>
+              </div>
+            </div>
+          </div>
+          <div style="
+            position: absolute;
+            margin-top:26px;
+            margin-left:10px;
+            background-color: white;
+            font-weight: bold;
+            z-index: 1;
+            font-size: 16px;
+          ">
+            <p style="font-size: 22px;">Video Titles</p>
+          </div>
+          <div class="vidoesTitle" id='vidoesTitle' style="padding-top:22px">
+            <div class="loading" style="    
+                    margin: 0;
+                    font-family: 'Roboto', sans-serif;
+                    padding: 0;
+                    border: 2px solid #3498db;
+                    border-radius: 50%;
+                    border-top: 2px solid #ffffff;
+                    width: 50px;
+                    height: 50px;
+                    animation: spin 1.1s linear infinite;
+                    display: block;
+                    position: fixed;
+                    top: 53%;
+                    left: 10%;
+                    transform: translate(-7%, -50%);
+            ">
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- right panel for vidoes description updates -->
+    <div>
+      <aside class="right" id='mainWin' oncontextmenu="return false">
+      <div id="ns" style="position: fixed;top:50%;left:74em;transform: translate(-50%, -50%);">
+        <h1 style="text-align: center;color: grey;">Select any video</h1>
+      </div>
+      <div class="loading" style="display: none;
+        position: fixed;
+        top:47%;left:60%;transform: translate(-50%, -50%);
+      ">
+      </div>
+
+        <div class="description" id='desc' style="display:none">
+          <div class="title">
+            <h1 id='dtitle'>All videos has been selected</h1>
+          </div>
+          <textarea name="textarea" id="descriptionArea" cols="30" rows="10" placeholder="add some description here......." ></textarea>
+          <div class="btn-grp">
+            <button class="btn_1">Cancel</button>
+            <button class="btn_2" id='updateAllBtn'>Update</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  
+  <script defer src="https://apis.google.com/js/api.js"></script>
+</body>
+
+</html>
