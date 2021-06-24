@@ -28,3 +28,6 @@ for using this application or any other application which are using this youtube
 
 # Run
 after all the installation run the main.py file
+
+# demo
+![homeAnimation1](https://user-images.githubusercontent.com/69845990/123261868-b81c7d80-d510-11eb-9cf9-955c34d9efd9.gif)
