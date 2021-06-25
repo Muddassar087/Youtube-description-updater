@@ -6,7 +6,7 @@ The YDU is a automation for youtube that uses youtube api v3 to update descripti
 <ul>
   <li>For single video it will work fine</li>
 
-  <li>For all videos to update there description you need know the new description will be added at the end of your video description it will not update whole video description</li>
+  <li>For all videos to update there description the new description will be added at the end of your each video's description it will not update the whole video's description</li>
 </ul>
 
 # Prerqusites
