@@ -10,21 +10,17 @@ The YDU is a automation for youtube that uses youtube api v3 to update descripti
 </ul>
 
 # Prerqusites
-you need to have python3.7 or above version
-install all the dependencies:
-<code>
-  pip install google_auth_oauthlib
-  pip install google.auth
-  pip install eel
-</code>
+you need to have python 3.7 or above version<br>
+install all the dependencies:<br>
+<code>pip install google_auth_oauthlib</code><br>
+<code>pip install google.auth</code><br>
+<code>pip install eel</code><br>
 
 # google api
 for using this application or any other application which are using this youtube api you'll need a secret key what you have to do is create a OAUTH key from google api console (you can name the project youtube description updater) download the sceret file and update the name of screte file along with the destineation in apiservices.py file
 
-<code>
-  SCOPES = ["https://www.googleapis.com/auth/youtube"]
-  SECRTE_FILE = 'you file destination along with name'
-</code>
+<code>SCOPES = ["https://www.googleapis.com/auth/youtube"]</code><br>
+<code>SECRTE_FILE = 'you file destination along with name'</code>
 
 # Run
 after all the installation run the main.py file
