@@ -17,7 +17,7 @@ install all the dependencies:<br>
 <code>pip install eel</code><br>
 
 # google api
-for using this application or any other application which are using this youtube api you'll need a secret key what you have to do is create a OAUTH key from google api console (you can name the project youtube description updater) download the sceret file and update the name of screte file along with the destineation in apiservices.py file and testing.py incase you want to store your data for longer time..
+for using this application or any other application which are using this youtube api you'll need a secret key what you have to do is create a OAUTH key from google api console (you can name the project youtube description updater) download the sceret file and update the name of screte file along with the destination in apiservices.py file and testing.py in case you want to store your key for longer time..
 
 <code>SCOPES = ["https://www.googleapis.com/auth/youtube"]</code><br>
 <code>SECRTE_FILE = 'your secret file.json destination along with name'</code>
